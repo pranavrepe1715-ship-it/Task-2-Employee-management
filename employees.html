@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Employees | NovaTech</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="navbar"><a class="logo" href="index.html">NovaTech</a><button class="menu-btn">☰</button><nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a><a class="active" href="employees.html">Employees</a><a href="login.html">Login</a></nav></header>
+<main>
+<section class="section">
+<div class="section-heading"><div><p class="eyebrow">CRUD SYSTEM</p><h1>Employee Management</h1></div><button id="logoutBtn" class="btn secondary">Logout</button></div>
+<form id="employeeForm" class="form inline-form">
+<input type="hidden" id="employeeId">
+<label>Name<input id="empName" required></label>
+<label>Department<input id="empDepartment" required></label>
+<label>Role<input id="empRole" required></label>
+<label>Salary<input id="empSalary" type="number" min="0" required></label>
+<label>Join Date<input id="empJoinDate" type="date" required></label>
+<div><button class="btn" type="submit" id="saveBtn">Add Employee</button><button class="btn secondary" type="button" id="cancelBtn">Cancel</button></div>
+<p id="employeeStatus" class="status"></p>
+</form>
+<div class="toolbar"><input id="searchInput" placeholder="Search employees..."><select id="sortSelect"><option value="id">ID</option><option value="name">Name</option><option value="department">Department</option><option value="salary">Salary</option><option value="join_date">Join Date</option></select><select id="orderSelect"><option value="ASC">Ascending</option><option value="DESC">Descending</option></select></div>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Department</th><th>Role</th><th>Salary</th><th>Join Date</th><th>Actions</th></tr></thead><tbody id="employeeTable"></tbody></table></div>
+</section>
+</main>
+<footer><p>© 2026 NovaTech. All rights reserved.</p></footer>
+<script src="js/main.js"></script><script src="js/employees.js"></script>
+</body></html>
